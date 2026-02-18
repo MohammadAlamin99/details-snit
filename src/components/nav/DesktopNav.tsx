@@ -41,22 +41,15 @@ export default function DesktopNav() {
                     </div>
 
                     {/* Right Buttons */}
-                    <div className="flex items-center gap-4">
-                        <button className="text-gray-500 hover:text-gray-700">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                            </svg>
-                        </button>
+                    <div className="flex items-center gap-8">
+                        <Image src="/images/translate.svg" alt="Brand" width={32} height={32} className='cursor-pointer' />
+                        <Image src="/images/shopping-cart-02.svg" alt="Brand" width={32} height={32} className='cursor-pointer' />
 
-                        <button className="text-gray-500 hover:text-gray-700">
-                            <CartIcon />
-                        </button>
-
-                        <button className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            Sign in
+                        <button className="flex items-center gap-2 cursor-pointer">
+                            <Image src="/images/user-circle.svg" alt="Brand" width={32} height={32} className='cursor-pointer' />
+                            <span className='font-poppins text-[16px] font-medium text-black'>
+                                Sign in
+                            </span>
                         </button>
                     </div>
 
