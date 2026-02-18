@@ -102,12 +102,12 @@ export default function ProductDetailsPage() {
             <DesktopNav />
             <MobileNav />
 
-            {/* Banner */}
-            <div className="bg-sky-500 text-white text-center py-2 text-xs font-medium px-4">
+
+            {/* banner */}
+            {/* <div className="bg-sky-500 text-white text-center py-2 text-xs font-medium px-4">
                 সহজ রিটার্ন পলিসি এবং সম্পূর্ণ ক্যাশ অন ডেলিভারি, কেনাকাটার সহজতা!
             </div>
 
-            {/* Desktop sub-nav */}
             <div className="hidden lg:flex items-center gap-6 px-8 py-3 bg-white border-b border-gray-100 text-sm">
                 <button className="flex items-center gap-1.5 font-medium text-gray-700 hover:text-sky-500">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
@@ -121,25 +121,23 @@ export default function ProductDetailsPage() {
                 <div className="ml-auto text-gray-500 text-xs">
                     সহজ রিটার্ন পলিসি এবং সম্পূর্ণ ক্যাশ অন ডেলিভারি, কেনাকাটার সহজতা!
                 </div>
-            </div>
+            </div> */}
 
             {/* ═══════════════════════════════════════════════
           BREAKPOINTS:
           < 1024px  → single column (mobile + tablet)
           ≥ 1024px  → product area + right sidebar
          ═══════════════════════════════════════════════ */}
-            <main className="max-w-[1720px] mx-auto px-4 lg:px-8 py-4 lg:py-8 pb-36 lg:pb-8">
+            {/* <main className="max-w-[1720px] mx-auto px-4 lg:px-8 py-4 lg:py-8 pb-36 lg:pb-8">
                 <div className="lg:flex lg:gap-8">
-
-                    {/* ── Main Product Column ── */}
                     <div className="flex-1 min-w-0">
 
-                        {/* Product card: image + info */}
+                     
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 lg:p-6 mb-4">
-                            {/* lg+: side by side | below lg: stacked */}
+                        
                             <div className="lg:flex lg:gap-8">
 
-                                {/* Gallery */}
+                               
                                 <div className="lg:w-80 xl:w-96 flex-shrink-0 mb-4 lg:mb-0">
                                     <div className="bg-gray-200 rounded-2xl aspect-square flex items-center justify-center text-gray-400 mb-3">
                                         <div className="text-center">
@@ -157,27 +155,27 @@ export default function ProductDetailsPage() {
                                     </div>
                                 </div>
 
-                                {/* Info */}
+                              
                                 <div className="flex-1">
                                     <h1 className="text-xl lg:text-2xl font-bold text-gray-900 leading-tight mb-2">
                                         {product.titleBn}
                                         <span className="block text-base lg:text-lg text-gray-600 font-semibold mt-1">{product.title}</span>
                                     </h1>
 
-                                    {/* Price */}
+                                  
                                     <div className="flex items-baseline gap-2 mb-3">
                                         <span className="text-2xl font-extrabold text-gray-900">৳{product.price}</span>
                                         <span className="text-base text-gray-400 line-through">৳{product.originalPrice}</span>
                                         <span className="bg-orange-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">{product.discount}% OFF</span>
                                     </div>
 
-                                    {/* Rating */}
+                                   
                                     <div className="flex items-center gap-2 mb-3">
                                         <Stars rating={product.rating} />
                                         <span className="text-sm text-gray-500">({product.reviewCount})</span>
                                     </div>
 
-                                    {/* Category */}
+                                 
                                     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-4 text-sm">
                                         <span className="text-gray-500">Category:</span>
                                         <span className="font-semibold text-sky-500 cursor-pointer hover:underline">{product.category}</span>
@@ -187,7 +185,7 @@ export default function ProductDetailsPage() {
                                         <span className="text-gray-500">({product.reviewCount})</span>
                                     </div>
 
-                                    {/* Specs */}
+                                   
                                     <div className="text-sm text-gray-700 space-y-1 mb-4 bg-gray-50 rounded-xl p-3">
                                         <div><span className="text-gray-500">উপাদান:</span> {product.material}</div>
                                         <div><span className="text-gray-500">সামঞ্জস্যপূর্ণ ব্র্যান্ড:</span> {product.brand}</div>
@@ -196,7 +194,7 @@ export default function ProductDetailsPage() {
                                         <div><span className="text-gray-500">উৎপত্তির স্থান:</span> {product.origin}</div>
                                     </div>
 
-                                    {/* Qty */}
+                                  
                                     <div className="flex items-center gap-3 mb-4">
                                         <span className="text-sm font-medium text-gray-700">Qty:</span>
                                         <div className="flex items-center border border-gray-200 rounded-xl overflow-hidden">
@@ -206,7 +204,7 @@ export default function ProductDetailsPage() {
                                         </div>
                                     </div>
 
-                                    {/* Colors */}
+                                   
                                     <div className="mb-4">
                                         <span className="text-sm font-semibold text-gray-700 block mb-2">Colour</span>
                                         <div className="flex items-center gap-2">
@@ -218,7 +216,7 @@ export default function ProductDetailsPage() {
                                         </div>
                                     </div>
 
-                                    {/* Sizes */}
+                                  
                                     <div className="mb-5">
                                         <span className="text-sm font-semibold text-gray-700 block mb-2">Size</span>
                                         <div className="flex items-center gap-2">
@@ -231,7 +229,7 @@ export default function ProductDetailsPage() {
                                         </div>
                                     </div>
 
-                                    {/* CTAs */}
+                                    
                                     <div className="flex gap-3 mb-3">
                                         <button className="flex-1 bg-sky-500 text-white py-3.5 rounded-2xl font-bold text-sm lg:text-base flex items-center justify-center gap-2 hover:bg-sky-600 active:scale-[0.98] transition-all shadow-lg shadow-sky-200">
                                             <CartIcon /> কার্ট
@@ -241,7 +239,7 @@ export default function ProductDetailsPage() {
                                         </button>
                                     </div>
 
-                                    {/* Call & Share */}
+                                    
                                     <div className="flex items-center gap-2">
                                         <button className="flex items-center gap-2 text-sky-500 border border-sky-200 rounded-xl px-4 py-2.5 text-sm font-semibold hover:bg-sky-50 transition-colors">
                                             <PhoneIcon /> কল অর্ডার : 01410-050041
@@ -254,7 +252,7 @@ export default function ProductDetailsPage() {
                             </div>
                         </div>
 
-                        {/* Tabs */}
+                       
                         <div className="mb-6">
                             <div className="flex border-b border-gray-200 gap-1 overflow-x-auto">
                                 {tabs.map((tab) => (
@@ -291,7 +289,7 @@ export default function ProductDetailsPage() {
                             </div>
                         </div>
 
-                        {/* Related Products (content area) */}
+                     
                         <div className="mb-6">
                             <div className="flex items-center justify-between mb-4">
                                 <h2 className="text-lg font-bold text-gray-900">Related Product</h2>
@@ -304,7 +302,7 @@ export default function ProductDetailsPage() {
                             </div>
                         </div>
 
-                        {/* Recent Products — tablet/mobile only (replaces sidebar) */}
+                     
                         <div className="lg:hidden mb-6">
                             <h2 className="text-lg font-bold text-gray-900 mb-4">Recent Products</h2>
                             <div className="space-y-3">
@@ -324,7 +322,7 @@ export default function ProductDetailsPage() {
                             </div>
                         </div>
 
-                        {/* Categories — tablet/mobile only */}
+                        
                         <div className="lg:hidden mb-6">
                             <h2 className="text-lg font-bold text-gray-900 mb-3">Categories</h2>
                             <div className="grid grid-cols-2 gap-3">
@@ -339,7 +337,7 @@ export default function ProductDetailsPage() {
 
                     </div>
 
-                    {/* ── Right Sidebar (lg+ only) ── */}
+                   
                     <div className="hidden lg:block w-72 xl:w-80 flex-shrink-0 space-y-6">
                         <div>
                             <div className="flex items-center justify-between mb-3">
@@ -371,13 +369,13 @@ export default function ProductDetailsPage() {
                     </div>
 
                 </div>
-            </main>
+            </main> */}
 
             {/* Animated Bottom Tab (below lg) */}
             <MobileTabBar />
 
             {/* Footer (lg+) */}
-            <footer className="hidden lg:block bg-white border-t border-gray-100 px-8 py-12 mt-8">
+            {/* <footer className="hidden lg:block bg-white border-t border-gray-100 px-8 py-12 mt-8">
                 <div className="max-w-[1720px] mx-auto grid grid-cols-5 gap-8">
                     <div className="col-span-1">
                         <div className="flex items-center gap-2 mb-3">
@@ -414,7 +412,7 @@ export default function ProductDetailsPage() {
                     <span>©2026 System Next IT, All right reserved.</span>
                     <span>www.overseasproducts.shop</span>
                 </div>
-            </footer>
+            </footer> */}
         </div>
     );
 }
