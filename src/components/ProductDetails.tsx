@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import CartIcon from "./svg/CartIcon";
 import MobileNav from "./nav/MobileNav";
 import DesktopNav from "./nav/DesktopNav";
 import { Product } from "@/@types/IProduct.type";
-import ProductCard from "./card/ProductCard";
 import SideBar from "./sidebar/SideBar";
 import MobileTabBar from "./topbar/MobileTabBar";
-import Image from "next/image";
 import AnnouncedBar from "./AnnouncedBar";
 import ProductMain from "./ProductMain";
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import RelatedProduct from "./details/RelatedProduct";
 
 const product: Product = {
     id: 1,
@@ -42,12 +42,48 @@ const product: Product = {
 };
 
 const relatedProducts = [
-    { id: 1, title: "A Kids Book About Yoga", price: 4.53, originalPrice: 5.0 },
-    { id: 2, title: "A Kids Book About Yoga", price: 4.53, originalPrice: 5.0 },
-    { id: 3, title: "A Kids Book About Yoga", price: 4.53, originalPrice: 5.0 },
-    { id: 4, title: "A Kids Book About Yoga", price: 4.53, originalPrice: 5.0 },
-    { id: 5, title: "A Kids Book About Yoga", price: 4.53, originalPrice: 5.0 },
-    { id: 6, title: "A Kids Book About Yoga", price: 4.53, originalPrice: 5.0 },
+    {
+        id: 1,
+        title: "A Kids Book About Yoga",
+        price: 4.53,
+        originalPrice: 5.0,
+        image: "/images/book.png",
+    },
+    {
+        id: 2,
+        title: "A Kids Book About Yoga",
+        price: 4.53,
+        originalPrice: 5.0,
+        image: "/images/book.png",
+    },
+    {
+        id: 3,
+        title: "A Kids Book About Yoga",
+        price: 4.53,
+        originalPrice: 5.0,
+        image: "/images/book.png",
+    },
+    {
+        id: 4,
+        title: "A Kids Book About Yoga",
+        price: 4.53,
+        originalPrice: 5.0,
+        image: "/images/book.png",
+    },
+    {
+        id: 5,
+        title: "A Kids Book About Yoga",
+        price: 4.53,
+        originalPrice: 5.0,
+
+    },
+    {
+        id: 6,
+        title: "A Kids Book About Yoga",
+        price: 4.53,
+        originalPrice: 5.0,
+        image: "/images/products/yoga-book.png",
+    },
 ];
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
@@ -118,44 +154,18 @@ export default function ProductDetailsPage() {
             </div>
 
             <main className="max-w-[1720px] mx-auto px-4 lg:px-8 py-4 lg:py-8 pb-36 lg:pb-8">
-                <div className="lg:flex lg:gap-8">
+                <div className="lg:flex lg:gap-6">
                     <div className="flex-1 min-w-0">
                         <ProductMain product={product} />
                     </div>
-
-                    <div className="hidden lg:block w-72 xl:w-80 flex-shrink-0 space-y-6">
-                        <div>
-                            <div className="flex items-center justify-between mb-3">
-                                <h3 className="font-bold text-gray-900">Related Product</h3>
-                                <button className="text-sky-500 text-xs font-semibold hover:underline">View More &gt;</button>
-                            </div>
-                            <div className="space-y-3">
-                                {relatedProducts.map((p) => <SideBar key={p.id} p={p} />)}
-                            </div>
-                        </div>
-                        <div>
-                            <h3 className="font-bold text-gray-900 mb-3">Recent Products</h3>
-                            <div className="space-y-3">
-                                {relatedProducts.slice(0, 4).map((p) => (
-                                    <div key={p.id} className="flex gap-3 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
-                                        <div className="w-14 h-14 bg-gradient-to-br from-orange-100 to-pink-100 rounded-xl flex-shrink-0" />
-                                        <div>
-                                            <p className="text-xs font-semibold text-gray-800 line-clamp-2 mb-1">{p.title}</p>
-                                            <p className="text-[10px] text-gray-400 mb-1">Yoga is a way to discover…</p>
-                                            <div className="flex items-center gap-1.5">
-                                                <span className="text-sm font-bold">${p.price}</span>
-                                                <span className="text-[10px] text-gray-400 line-through">${p.originalPrice}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                    {/* related product */}
+                    <div className="hidden lg:block h-fit w-72 xl:w-80 bg-white px-4 py-6 rounded-2xl">
+                        <RelatedProduct />
                     </div>
                 </div>
             </main>
 
-            {/* Animated Bottom Tab (below lg) */}
+            {/* mobile tab bar */}
             <MobileTabBar />
 
             {/* Footer (lg+) */}

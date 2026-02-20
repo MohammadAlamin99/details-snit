@@ -1,14 +1,9 @@
 "use client";
-
 import React from "react";
-import CartIcon from "./svg/CartIcon";
-import { PhoneIcon, ShareIcon } from "./ProductDetails";
 import { Product } from "@/@types/IProduct.type";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs } from "swiper/modules";
-import { Plus, Minus } from "lucide-react";
-
 import "swiper/css";
 import Reviwicon from "./details/Reviwicon";
 import MetaData from "./details/MetaData";
@@ -20,9 +15,6 @@ import CallOrderBar from "./details/CallOrderBar";
 
 export default function ProductMain({ product }: { product: Product }) {
     const [quantity, setQuantity] = React.useState(1);
-    const [selectedColor, setSelectedColor] = React.useState(0);
-    const [selectedSize, setSelectedSize] = React.useState<string | null>(null);
-
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [thumbsSwiper, setThumbsSwiper] = React.useState<any>(null);
     const dummyImages = [
@@ -35,11 +27,10 @@ export default function ProductMain({ product }: { product: Product }) {
     const imagesToShow = dummyImages;
 
     return (
-        <div className="bg-white rounded-2xl shadow-sm borde p-4 lg:p-6 mb-4">
+        <div className="bg-white rounded-2xl p-4 lg:p-6 mb-4">
             <div className="lg:flex lg:gap-6">
                 {/* LEFT */}
                 <div className="lg:basis-1/2 flex-shrink-0 mb-4 lg:mb-0 min-w-0">
-                    {/* MAIN IMAGE */}
                     <div className="bg-gray-200 rounded-2xl aspect-square overflow-hidden mb-3 relative">
                         <Swiper
                             modules={[Thumbs]}
@@ -137,16 +128,14 @@ export default function ProductMain({ product }: { product: Product }) {
 
                     {/* BUTTONS */}
                     <div className="flex gap-2 mb-3 flex-wrap">
-                        <button className="flex-1 font-lato text-white py-3 rounded-[8px] font-bold flex items-center justify-center gap-2 bg-[linear-gradient(0deg,#38BDF8_0%,#1E90FF_100%)]">
+                        <button className="flex-1 font-lato text-white py-3 rounded-[8px] font-bold flex items-center justify-center gap-2 bg-[linear-gradient(0deg,#38BDF8_0%,#1E90FF_100%)] cursor-pointer">
                             <Image src="/images/shopping.svg" width={24} height={24} alt="shopping" />
                             কার্ট
                         </button>
-                        <button className="flex-1 font-lato text-white py-3 rounded-[8px] font-bold flex items-center justify-center gap-2 bg-[linear-gradient(180deg,#FF6A00_0%,#FF9F1C_100%)]">
+                        <button className="flex-1 font-lato text-white py-3 rounded-[8px] font-bold flex items-center justify-center gap-2 bg-[linear-gradient(180deg,#FF6A00_0%,#FF9F1C_100%)] cursor-pointer">
                             <Image src="/images/atc.svg" width={24} height={24} alt="shopping" />
                             অর্ডার করুন
                         </button>
-
-
                     </div>
 
                     <CallOrderBar />
