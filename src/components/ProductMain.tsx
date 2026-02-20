@@ -27,7 +27,7 @@ export default function ProductMain({ product }: { product: Product }) {
     const imagesToShow = dummyImages;
 
     return (
-        <div className="bg-white rounded-2xl p-4 lg:p-6 mb-4">
+        <div className="bg-white rounded-[8px] p-4 lg:p-6 mb-4">
             <div className="lg:flex lg:gap-6">
                 {/* LEFT */}
                 <div className="lg:basis-1/2 flex-shrink-0 mb-4 lg:mb-0 min-w-0">
@@ -62,14 +62,14 @@ export default function ProductMain({ product }: { product: Product }) {
                     <Swiper
                         modules={[Thumbs]}
                         onSwiper={setThumbsSwiper}
-                        spaceBetween={8}
+                        spaceBetween={12}
                         slidesPerView={4}
                         watchSlidesProgress
                         className="w-full"
                     >
                         {imagesToShow.map((img, i) => (
                             <SwiperSlide key={i}>
-                                <div className="relative w-full aspect-square rounded-xl overflow-hidden border border-gray-200">
+                                <div className="relative w-full aspect-square rounded-[8px] overflow-hidden border border-gray-200">
                                     <Image
                                         src={img}
                                         alt={`thumb-${i}`}
