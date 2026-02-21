@@ -11,10 +11,8 @@ export default function AnnouncedBar() {
                     সহজ রিটার্ন পলিসি এবং সম্পূর্ণ ক্যাশ অন ডেলিভারি, কেনাকাটার সহজতা!
                 </div>
 
-                {/* Desktop Layout */}
+                {/* Desktop content*/}
                 <div className="hidden lg:flex w-full">
-
-                    {/* Left Side 40% */}
                     <div className="flex items-center gap-5 px-8 py-3.5 bg-white border-b border-gray-100 text-sm basis-[40%]">
 
                         <button className="flex items-center gap-1 font-poppins font-medium cursor-pointer">
@@ -35,8 +33,6 @@ export default function AnnouncedBar() {
                         </button>
 
                     </div>
-
-                    {/* Right Side 60% */}
                     <div className="flex items-center justify-center text-black text-[16px] basis-[50%]">
                         সহজ রিটার্ন পলিসি এবং সম্পূর্ণ ক্যাশ অন ডেলিভারি, কেনাকাটার সহজতা!
                     </div>

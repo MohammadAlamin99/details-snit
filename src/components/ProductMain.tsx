@@ -29,9 +29,7 @@ export default function ProductMain({ product }: { product: Product }) {
     return (
         <div className="bg-white rounded-[8px] p-0 lg:p-6 mb-4">
             <div className="lg:flex lg:gap-6">
-                {/* LEFT */}
                 <div className="lg:basis-1/2 flex-shrink-0 mb-4 lg:mb-0 min-w-0">
-                    {/* Main image */}
                     <div className="bg-gray-200 rounded-2xl aspect-square overflow-hidden mb-3 relative">
                         <Swiper
                             modules={[Thumbs]}
@@ -83,14 +81,14 @@ export default function ProductMain({ product }: { product: Product }) {
                     </Swiper>
                 </div>
 
-                {/* RIGHT */}
+
                 <div className="lg:basis-1/2 min-w-0 font-inter">
-                    {/* Title */}
+
                     <h1 className="text-xl lg:text-3xl font-bold font-lato text-black leading-tight mb-3 lg:mb-9 mt-3 lg:mt-0">
                         {`${product.titleBn} | ${product.title}`}
                     </h1>
 
-                    {/* Category & Ratings — hidden on mobile, visible on desktop */}
+                    {/* Category & Ratings desktop */}
                     <div className="hidden lg:flex flex-wrap items-center justify-between gap-x-3 font-lato gap-y-1 mb-4 text-sm">
                         <div className="flex items-center gap-6">
                             <span className="text-black text-lg">Category :</span>
@@ -112,24 +110,23 @@ export default function ProductMain({ product }: { product: Product }) {
                         </div>
                     </div>
 
-                    {/* MetaData — hidden on mobile */}
+                    {/* MetaData desktop  */}
                     <div className="hidden lg:block">
                         <MetaData />
                     </div>
 
-                    {/* Price + QTY row — mobile: same row, desktop: same row */}
+                    {/*price on mobile*/}
                     <div className="flex items-center flex-wrap justify-between mb-4 lg:mb-9">
                         <Price product={product} />
-                        {/* Ratings shown inline on mobile */}
+                        {/* Ratings mobile */}
                         <div className="flex lg:hidden items-center gap-1">
                             <Reviwicon />
                             <span className="text-black text-xs">({product.reviewCount})</span>
                         </div>
-                        {/* QTY */}
                         <QTY quantity={quantity} setQuantity={setQuantity} />
                     </div>
 
-                    {/* Color + Size — same row on both mobile and desktop */}
+                    {/* color and size */}
                     <div className="flex items-start justify-between flex-wrap mb-4 lg:mb-0">
                         <div className="pb-4 lg:pb-9">
                             <Color />

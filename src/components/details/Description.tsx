@@ -10,8 +10,6 @@ export default function Description() {
                 <button className="px-5 py-2 text-base lg:text-2xl font-medium leading-[150%] font-lato rounded-[32px] whitespace-nowrap">সবিস্তার বিবরণী</button>
                 <button className="px-5 py-2 text-base lg:text-2xl font-medium leading-[150%] font-lato rounded-[32px] whitespace-nowrap">ক্রেতার মতব্য</button>
             </div>
-
-            {/* Video Banner - mobile এ উপরে, desktop এ side by side */}
             <div className="mt-6 block lg:hidden">
                 <Image
                     src="/images/videoBanner.png"
@@ -42,7 +40,6 @@ export default function Description() {
                     <p className="font-lato text-[16px] leading-[150%]">Compatible: Universal Smart Phone Tablet</p>
                 </div>
 
-                {/* Image - desktop এ right side এ */}
                 <div className="hidden lg:block w-[50%]">
                     <Image
                         src="/images/videoBanner.png"
@@ -53,8 +50,6 @@ export default function Description() {
                     />
                 </div>
             </div>
-
-            {/* Description Text */}
             <p className="font-lato text-[16px] leading-[150%] mt-8">
                 Packaging and delivery
                 Selling Units: Single item

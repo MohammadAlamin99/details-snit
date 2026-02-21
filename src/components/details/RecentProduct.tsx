@@ -186,16 +186,14 @@ const dummyProducts: Product[] = [
 export default function RecentProduct() {
     return (
         <div>
-            {/* Header */}
             <div className="flex justify-between items-center mb-4 lg:mb-6">
                 <h2 className="text-xl lg:text-2xl font-lato font-bold">Recent Products</h2>
             </div>
 
-            {/* Product List — same style for mobile & desktop */}
+            {/* Product List */}
             <div className="space-y-4 lg:space-y-5">
                 {dummyProducts.map((product) => (
                     <div key={product.id} className="flex gap-4 items-start pb-3 border-b border-gray-100 last:border-0">
-                        {/* Image */}
                         <div className="relative w-16 h-20 lg:w-20 lg:h-24 flex-shrink-0">
                             <Image
                                 src={product.image}
@@ -205,7 +203,6 @@ export default function RecentProduct() {
                             />
                         </div>
 
-                        {/* Content */}
                         <div className="flex-1">
                             <h3 className="text-[14px] lg:text-[16px] font-roboto font-medium line-clamp-1">
                                 {product.title}

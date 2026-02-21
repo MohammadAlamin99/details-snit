@@ -5,16 +5,10 @@ export default function DesktopNav() {
     return (
         <div>
             <nav className="hidden lg:block bg-white sticky top-0 z-40 border-b border-[#F1F5FF]">
-
-                {/* Container */}
                 <div className="max-w-[1720px] mx-auto w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
-
-                    {/* Logo */}
                     <Link href='/'>
                         <Image src="/images/logo.png" alt="Logo" width={222} height={48} />
                     </Link>
-
-                    {/* Search */}
                     <div className='flex'>
                         <div className='bg-[#F1F5FF] p-2 rounded-lg'>
                             <Image src="/images/cameraIcon.svg" alt="Brand" width={32} height={32} className='cursor-pointer' />
@@ -38,8 +32,6 @@ export default function DesktopNav() {
                             </button>
                         </div>
                     </div>
-
-                    {/* Right Buttons */}
                     <div className="flex items-center gap-8">
                         <Image src="/images/translate.svg" alt="Brand" width={32} height={32} className='cursor-pointer' />
                         <Image src="/images/shopping-cart-02.svg" alt="Brand" width={32} height={32} className='cursor-pointer' />

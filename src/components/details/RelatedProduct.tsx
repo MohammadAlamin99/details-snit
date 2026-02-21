@@ -240,12 +240,10 @@ export default function RelatedProduct() {
                     <ChevronRight width={12} height={16} color="#1E90FF" />
                 </Link>
             </div>
-
-            {/* ── MOBILE: 2-column grid card ── */}
             <div className="grid grid-cols-2 gap-3 lg:hidden">
                 {dummyProducts.map((product) => (
                     <div key={product.id} className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
-                        {/* Image */}
+
                         <div className="relative w-full aspect-square">
                             {product.isSale && (
                                 <span className="absolute top-2 left-2 z-10 bg-[#FF3C3C] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
@@ -260,21 +258,21 @@ export default function RelatedProduct() {
                             <Image src={product.image} alt={product.title} fill className="object-cover" />
                         </div>
 
-                        {/* Content */}
+
                         <div className="p-2">
-                            {/* Rating + Sold */}
+
                             <div className="flex items-center gap-1 mb-1">
                                 {product.rating && <StarRating rating={product.rating} />}
                                 <span className="text-[10px] text-gray-500">({product.sold})</span>
                                 <span className="text-[10px] text-gray-400 ml-1">| {product.sold} Sold</span>
                             </div>
 
-                            {/* Title */}
+
                             <h3 className="text-[12px] font-roboto font-medium leading-tight line-clamp-2 mb-1">
                                 {product.title}
                             </h3>
 
-                            {/* Description */}
+
                             <p className="text-[10px] text-[#727272] line-clamp-2 mb-1.5">
                                 {product.description}
                             </p>
@@ -289,7 +287,7 @@ export default function RelatedProduct() {
                                 </span>
                             </div>
 
-                            {/* Coins */}
+
                             <Link href="#" className="text-[10px] text-[#15A4EC] font-roboto font-medium block mb-2">
                                 Get 10 Coins
                             </Link>
@@ -311,7 +309,7 @@ export default function RelatedProduct() {
                 ))}
             </div>
 
-            {/* ── DESKTOP: original list layout ── */}
+            {/* desktop */}
             <div className="hidden lg:block space-y-5">
                 {dummyProducts.map((product) => (
                     <div key={product.id} className="flex gap-6 items-start pb-3">

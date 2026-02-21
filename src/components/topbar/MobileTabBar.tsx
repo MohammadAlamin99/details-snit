@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { BellIcon, ChatIcon, SearchIcon } from "../ProductDetails";
-import { Plus } from "lucide-react";
+import { BellIcon, Plus } from "lucide-react";
+import { ChatIcon, SearchIcon } from "../details/Icons";
 
 type FanItem = {
     icon: React.ReactNode;
@@ -22,7 +22,7 @@ export default function MobileTabBar() {
     return (
         <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
 
-            {/* Backdrop */}
+
             {open && (
                 <div
                     className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
@@ -30,7 +30,7 @@ export default function MobileTabBar() {
                 />
             )}
 
-            {/* Fan Icons */}
+
             <div className="relative z-[60]">
                 {items.map((item, i) => (
                     <button
@@ -58,7 +58,7 @@ export default function MobileTabBar() {
                 ))}
             </div>
 
-            {/* Bottom Bar Wrapper (light contrast background) */}
+            {/* Bottom Bar Wrapper*/}
             <div className="relative z-50">
 
                 {/* SVG Background */}
