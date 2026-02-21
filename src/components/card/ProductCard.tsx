@@ -1,5 +1,5 @@
-import React from 'react'
-import { StarIcon } from '../ProductDetails'
+
+import { StarIcon } from '../details/Icons'
 const relatedProducts = [
     { id: 1, title: "A Kids Book About Yoga", price: 4.53, originalPrice: 5.0 },
     { id: 2, title: "A Kids Book About Yoga", price: 4.53, originalPrice: 5.0 },
