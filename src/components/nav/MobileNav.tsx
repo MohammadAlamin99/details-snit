@@ -12,7 +12,7 @@ export default function MobileNav() {
                     </Link>
 
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-3 sm:gap-5">
                     <Image src="/images/translate.svg" alt="Brand" width={24} height={24} className='cursor-pointer' />
                     <Image src="/images/search-01.svg" alt="Brand" width={24} height={24} className='cursor-pointer' />
                     <Image src="/images/shopping-cart-02.svg" alt="Brand" width={24} height={24} className='cursor-pointer' />
